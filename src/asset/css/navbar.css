@@ -1,0 +1,27 @@
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+
+.ant-menu-item .badge-notification {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+}
+
+.ant-menu-item{
+    min-width: 150px;
+}
+  
+.inline-div {
+   display: inline-block;
+   position: relative;
+   margin: 0 13px;
+}
+  

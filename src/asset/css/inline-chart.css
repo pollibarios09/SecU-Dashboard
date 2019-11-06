@@ -1,0 +1,23 @@
+.chart-layout {
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+    /* width: 85%; */
+    margin: 5px 0;
+    height: 10px;
+    background: black;
+}
+.chart-text{
+    font-size: 18px;
+}
+.chart-success {
+    background: #14D633;
+}
+
+.chart-danger {
+    background: #F02E18;
+}
+
+.chart-warning {
+    background: #FCC006;
+}
