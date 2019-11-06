@@ -15,7 +15,7 @@ class DashboardContent extends Component {
         super();
         this.state = {
             dashboard: {},
-            percentage: 50
+            percentage: 80
         }
     }
 
@@ -31,12 +31,12 @@ class DashboardContent extends Component {
             state: 'dashboard'
         });        
 
-        const min = 40;
-        const max = 100;
-        let randomizer = Math.floor(min + Math.random() * (max - min));
-        console.log(randomizer);
-
-        this.interval = setInterval(() => this.setState({ percentage: randomizer }), 1000);
+        this.interval = setInterval(() =>{
+            const min = 58;
+            const max = 100;
+            let randomizer = Math.floor(min + Math.random() * (max - min));
+            this.setState({ percentage: randomizer })
+        }, 2000);
     }
 
     componentWillUnmount() {
@@ -50,7 +50,6 @@ class DashboardContent extends Component {
                 <div className="d-flex align-items-center" style={{height: "78px"}}>
                     <div class="content-title">Summary</div>
                 </div>
-                {console.log(this.state.dashboard)}
                 <Row gutter={[16, 16]}>
                     <Col span={12}>
                         <div class="card">
@@ -95,13 +94,14 @@ class DashboardContent extends Component {
                                 <p class="text-left d-card-title">Status</p>
 
                                 <Progress type="dashboard" percent={this.state.percentage} 
-                                    strokeColor={this.state.percentage < 70 ?  this.state.percentage < 50? "#F02E18" : "#FDC203" :"#14D633"} />
+                                    strokeColor={this.state.percentage < 90 ?  this.state.percentage < 60? "#F02E18" : "#FDC203" :"#14D633"} />
                                 <div>
                                     <strong className="d-block">
                                         <label class="text-muted">                                        
-                                        {this.state.percentage < 70 ? this.state.percentage < 50? "UnHealthy" : "Fair" : "Healthy"}
+                                        {this.state.percentage < 90 ? this.state.percentage < 60? "UnHealthy" : "Fair" : "Healthy"}
                                     </label></strong>
-                                   <small className="d-block"><label class="text-muted">With faded secondary text</label></small> 
+                                   <small className="d-block"><label class="text-muted">
+                                       95% Target </label></small> 
                                 </div>
                             </div>
                         </div>
